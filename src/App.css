@@ -1,38 +1,599 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-size: 1.25em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.video-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0,20,16);
+  background: linear-gradient(225deg, rgba(0,20,16,1) 2%, rgba(0,3,9,1) 45%, rgba(0,38,31,1) 95%);
+  z-index: 200;
+}
+
+video {
+  width: 100%;
+  height: 100vh;
+  filter: brightness(0.50);
+}
+
+.video-container .head-bl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 220px 180px;
+  z-index: 100;
+}
+
+.head-bl h1 {
+  color: #fff;
+  font-size: 3.8em;
+  width: 800px;
+}
+
+.head-bl p {
+  color: #fff;
+  margin: 10px 0;
+  width: 800px;
+}
+
+.head-bl button {
+  display: inline-block;
+  font-size: 0.6em;
+  background: #fff;
+  padding: 10px 42px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border: none;
+  font-size: 1.1em;
+}
+
+.box-content button:hover
+{
+  letter-spacing: 6px;
+}
+
+.icons-bl {
+  display: flex;
+  padding: 30px 0;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 30px;
+  filter: invert(1);
+}
+
+/* === >>> Main >>> === >>> */
+
+main {
+  height: 100%;
+  width: 100vw;
+  background: rgb(0,24,19);
+  background: radial-gradient(circle, rgba(0,24,19,1) 5%, rgba(9,9,9,1) 41%);
+}
+
+/* === >>> Main >>> ThreeBlock >>> === >>> */
+
+.three-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 450px;
+  height: auto;
+  border: none;
+  border-top: 1px solid #fff;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 320px;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  margin: 25px;
+  background-color: #002e25;
+  z-index: 100;
+}
+
+.block p { color: #fff; text-align: center; margin: 15px;}
+
+
+/* === >>> Main >>> About Me >>> === >>> */
+
+.about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 450px;
+  height: auto;
+  border: none;
+  border-top: 1px solid #fff;
+}
+
+.about .img-my {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.about-child {
+  width: auto;
+  max-width: 650px;
+  color: #fff;
+  z-index: 200;
+}
+
+.about h2 {
+  margin-bottom: 15px;
+}
+
+/* === >>> Main >>> Skill >>> === >>> */
+
+.skill {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  min-height: 350px;
+  height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.skill h2 {
+  color: #fff;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.skill-bl {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-sk {
+  width: 75px;
+  height: 75px;
+  margin-right: 15px;
+  margin: 15px;
+}
+
+/* === >>> Footer >>> === >>> */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 250px;
+  height: auto;
+  border: none;
+  border-top: 1px solid #fff;
+  background: rgb(0,0,0);
+  background: linear-gradient(172deg, rgba(0,0,0,1) 49%, rgba(0,34,27,1) 95%);
+}
+
+.main-bl {
+  width: 100%;
+  height: 200px;
+  color: #fff;
+}
+
+.main-bl h2{
+  margin: 25px 20px;
+}
+
+.footer-con-bl {
+  margin: 0 25px;
+}
+
+.footer-con-bl p {
+  margin-top: 5px;
+}
+
+.bl-create-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+}
+
+@media screen and (max-width: 1124px) {
+  .video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,20,16);
+    background: linear-gradient(225deg, rgba(0,20,16,1) 2%, rgba(0,3,9,1) 45%, rgba(0,38,31,1) 95%);
+  
   }
-  to {
-    transform: rotate(360deg);
+  
+  .video-container .head-bl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 120px 45px;
+    z-index: 100;
+  }
+  
+  .head-bl p {
+    color: #fff;
+    margin: 15px 0;
+    width: 800px;
   }
 }
+
+@media screen and (max-width: 858px) { 
+  /* === >>> Main >>> ThreeBlock >>> === >>> */
+
+  p {
+    font-size: 1.15em;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,20,16);
+    background: linear-gradient(225deg, rgba(0,20,16,1) 2%, rgba(0,3,9,1) 45%, rgba(0,38,31,1) 95%);
+  
+  }
+  
+  video {
+    width: 100%;
+    height: 100vh;
+    filter: brightness(0.50);
+  }
+  
+  .video-container .head-bl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 80px 45px;
+    z-index: 100;
+  }
+  
+  .head-bl h1 {
+    color: #fff;
+    font-size: 3.2em;
+    width: 600px;
+  }
+  
+  .head-bl p {
+    color: #fff;
+    margin: 10px 0;
+    width: 600px;
+  }
+  
+  .head-bl button {
+    display: inline-block;
+    font-size: 0.6em;
+    background: #fff;
+    padding: 10px 42px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    border: none;
+    font-size: 1.1em;
+  }
+  
+  .box-content button:hover
+  {
+    letter-spacing: 6px;
+  }
+  
+  .icons-bl {
+    display: flex;
+    padding: 30px 0;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 30px;
+    filter: invert(1);
+  }
+  
+
+.three-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 450px;
+  height: auto;
+  border: none;
+  border-top: 1px solid #fff;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 320px;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  margin: 25px;
+  background-color: #002e25;
+  z-index: 100;
+}
+
+.block p { color: #fff; text-align: center; margin: 15px;}
+
+/* === >>> Main >>> About Me >>> === >>> */
+.about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 450px;
+  height: auto;
+}
+
+.about .img-my {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.about-child {
+  width: auto;
+  max-width: 450px;
+  color: #fff;
+  z-index: 200;
+  margin: 20px;
+}
+
+/* === >>> Footer >>> === >>> */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 250px;
+  height: auto;
+  border: none;
+  border-top: 1px solid #fff;
+  background: rgb(0,0,0);
+  background: linear-gradient(172deg, rgba(0,0,0,1) 49%, rgba(0,34,27,1) 95%);
+}
+
+.main-bl {
+  width: 100%;
+  height: 200px;
+  color: #fff;
+}
+
+.main-bl h2{
+  margin: 25px 20px;
+}
+
+.footer-con-bl {
+  margin: 0 25px;
+}
+
+.footer-con-bl p {
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+.bl-create-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  font-size: 0.8em;
+}
+
+}
+
+@media screen and (max-width: 660px) { 
+  .video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,20,16);
+    background: linear-gradient(225deg, rgba(0,20,16,1) 2%, rgba(0,3,9,1) 45%, rgba(0,38,31,1) 95%);
+  
+  }
+  
+  video {
+    width: 100%;
+    height: 100vh;
+    filter: brightness(0.50);
+  }
+  
+  .video-container .head-bl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 80px 40px;
+    z-index: 100;
+  }
+  
+  .head-bl h1 {
+    color: #fff;
+    font-size: 3.2em;
+    width: 420px;
+    font-size: 1.3em;
+  }
+  
+  .head-bl p {
+    color: #fff;
+    margin: 10px 0;
+    width: 420px;
+  }
+  
+  .head-bl button {
+    display: inline-block;
+    font-size: 0.8em;
+    background: #fff;
+    padding: 11px 62px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    border: none;
+    font-size: 1.1em;
+  }
+  
+  .box-content button:hover
+  {
+    letter-spacing: 6px;
+  }
+  
+  .icons-bl {
+    display: flex;
+    padding: 30px 0;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 30px;
+    filter: invert(1);
+  }  
+
+}
+
+@media screen and (max-width: 460px) { 
+  .video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,20,16);
+    background: linear-gradient(225deg, rgba(0,20,16,1) 2%, rgba(0,3,9,1) 45%, rgba(0,38,31,1) 95%);
+  
+  }
+  
+  .video-container video {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.50);
+  }
+  
+  .video-container .head-bl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 80px 40px;
+    z-index: 100;
+  }
+  
+  .head-bl h1 {
+    color: #fff;
+    font-size: 2.8em;
+    width: 320px;
+  }
+  
+  .head-bl p {
+    color: #fff;
+    margin: 10px 0;
+    width: 320px;
+    font-size: 1.3em;
+  }
+  
+  .head-bl button {
+    display: inline-block;
+    font-size: 0.8em;
+    background: #fff;
+    padding: 12px 82px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    border: none;
+    font-size: 1.1em;
+    margin-top: 30%;
+  }
+  
+  .box-content button:hover
+  {
+    letter-spacing: 6px;
+  }
+  
+  .icons-bl {
+    display: flex;
+    padding: 30px 0;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 30px;
+    filter: invert(1);
+  }  
+
+  /* === >>> Main >>> Skill >>> === >>> */
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 350px;
+  height: auto;
+}
+
+.skill h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.skill-bl {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-sk {
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+  margin: 15px;
+}
+
+}
+
