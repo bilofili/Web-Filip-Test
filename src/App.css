@@ -273,7 +273,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #04131a;
+  background: rgb(0,24,19);
+  background: radial-gradient(circle, rgba(0,24,19,1) 5%, rgba(9,9,9,1) 41%);
 }
 
 .contact-cnt {
