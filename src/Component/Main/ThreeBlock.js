@@ -2,13 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import web_icon from './web-development.png'
+import barber from "./IMG_2931.JPG";
+import reviews from "./2023-09-10 21.21.56.jpg";
+import recept from "./Recipe.jpg";
 
 export const ThreeBlock = () => {
 
     const [refOne, inViewOne] = useInView(true);
     const [refTwo, inViewTwo] = useInView(true);
     const [refThree, inViewThree] = useInView(true);
+
+        
  
         
     return (
@@ -19,7 +23,8 @@ export const ThreeBlock = () => {
             animate={inViewOne? {opacity: 1, x: 0, y: 0} : {opacity: 0, x: 60, y: 0 }}  
             transition={{ duration: 1 }}
             className="block">
-            <p>I have over 3 of experience in web development.</p>
+            <img src={barber} alt="" className='link-img' />
+            <h3>Barber Shop</h3>
             </motion.div>
 
             <motion.div 
@@ -28,8 +33,8 @@ export const ThreeBlock = () => {
             animate={inViewTwo ? {opacity: 1, x: 0, y: 0} : {opacity: 0, x: 60, y: 0 }}  
             transition={{ duration: 1.3 }}
             className="block">
-            <p>My specialization is in developing custom websites using modern technologies.</p>
-            <img src={web_icon} alt="experienc" className='webIcon' />
+            <img src={reviews} alt="" className='link-img' />
+            <h3>Reviews App</h3>
             </motion.div>
 
             <motion.div
@@ -38,9 +43,9 @@ export const ThreeBlock = () => {
             animate={inViewThree ? {opacity: 1, x: 0, y: 0} : {opacity: 0, x: 60, y: 0 }}  
             transition={{ duration: 1.6 }}
             className="block">
-            <p>I have worked on a variety of projects, from small business websites to large web applications.</p>
+            <img src={recept} alt="" className='link-img' />
+            <h3>Recipes App</h3>
             </motion.div>
-
         </div>
     );
 }
